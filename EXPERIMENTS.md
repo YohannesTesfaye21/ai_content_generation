@@ -101,3 +101,36 @@ history (git log) and the kept first versions in `outputs/keyframes_v1/` and
   toward a semi-photographic look, while non-reference shots (s01, s02) stay painterly.
 - **Next hypothesis:** regenerate the reference itself in a stronger painted style (or add
   "visible brush strokes, paper texture" to the style block) so the reference carries the style too.
+
+### E12 — Generic prompts produce generic (not Ethiopian) images
+- **Hypothesis:** "Ethiopian grandmother", "thatched house", "coffee pot" are enough for an
+  Ethiopian audience to recognise their own world.
+- **Result (v2, `outputs/keyframes_v2/`):** pan-African or even Latin-American-looking scenes: a
+  generic round hut, a plain white shawl, Western cups, a family that did not read as Habesha.
+  For the intended audience (Ethiopians, DESIGN.md) this breaks the "that was my grandmother's
+  house" feeling the film exists for.
+- **Change:** named the specific cultural objects and features instead of categories:
+  Amhara highland *tukul* with teff terraces and eucalyptus; Habesha facial features, thin braids,
+  a faint traditional cross tattoo; *netela* and *habesha kemis* with *tibeb* borders;
+  *menkeshkesh* roasting pan on a *kesel* charcoal stove; *rekebot* tray, *sini* cups, fresh
+  *ketema* grass and meskel daisies, frankincense burner; *kolo* and popcorn; father in a *gabi*,
+  mother with *shuruba* braids; Addis Ababa skyline with the Entoto hills for the last shot.
+  The style block now also says "authentic Ethiopian setting and people" and adds
+  "visible brush strokes and paper texture" (E11).
+- **Result (v3):** every frame now carries recognisable Ethiopian detail; the painterly style
+  holds better on reference shots too. The s06 family came out with light-skinned children on
+  the first try; adding "everyone with deep dark brown skin and Ethiopian facial features" and
+  a new seed (1206) fixed it.
+- **Decision:** specific nouns beat adjectives. Ask Ethiopian viewers in user test 2 whether any
+  detail looks wrong.
+
+### E13 — The model does not know what a jebena looks like
+- **Result:** "black clay jebena coffee pot" gave a vase (s08) and then a European jug (s05).
+- **Change:** describe the geometry instead of the name: "shaped like a gourd, a perfectly
+  spherical round base, a tall narrow straight neck rising from it like a bottle, a short spout
+  sticking out sideways from the round base, a small handle joining neck to base, a woven straw
+  stopper".
+- **Result:** both shots now show a recognisable jebena (round base, tall neck, straw stopper);
+  s05 has the side spout, s08 still lacks it. 2 calls, every other shot a cache hit.
+- **Lesson:** for culturally specific objects that are rare in training data, name it *and*
+  describe its shape.

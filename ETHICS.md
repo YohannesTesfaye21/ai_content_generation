@@ -40,6 +40,13 @@ the general, widely shared story of the coffee ceremony.
 | Arial (macOS system font) | used only to render text into frames | subtitles |
 | jsonschema | MIT | validation |
 
+## Cultural representation
+
+The audience is Ethiopian, so the images name specific Ethiopian objects, dress and places
+(EXPERIMENTS E12) rather than a generic "African" look. The traditional cross tattoo is kept small
+and faint, as worn by many older Orthodox Amhara women, not exaggerated. Ethiopian viewers in the
+user tests are asked to flag anything inaccurate.
+
 ## Style
 
 The look is described by its qualities ("warm hand-painted gouache illustration, soft golden

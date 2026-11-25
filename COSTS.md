@@ -7,14 +7,14 @@ the local stages on an Apple M2 Pro. Actual spend: **$0**.
 
 | Stage | Model | OK calls | Failed | Mean latency (s) | Max latency (s) | Total (s) | List-price equiv. (USD) |
 |---|---|---|---|---|---|---|---|
-| keyframes | `@cf/black-forest-labs/flux-2-klein-4b` | 18 | 0 | 9.1 | 13.5 | 164 | 0.0270 |
+| keyframes | `@cf/black-forest-labs/flux-2-klein-4b` | 35 | 0 | 9.8 | 13.5 | 342 | 0.0525 |
 | narration | `gemini-3.8-flash-lite-tts` | 9 | 0 | 4.7 | 5.3 | 43 | 0.0090 |
 | narration | `gemini-3.8-flash-tts` | 9 | 0 | 7.6 | 8.4 | 68 | 0.0180 |
 | script | `gemini-3.8-flash` | 1 | 0 | 137.9 | 137.9 | 138 | 0.0005 |
-| **total** | | | | | | **413** | **0.0545** |
+| **total** | | | | | | **591** | **0.0800** |
 
-18 keyframe calls made 8 final keyframes plus the reference: the other 9 are the v1 set and the
-re-generations from experiments E3, E4 and E8. 9 of the 18 TTS calls were the v1 lines lost to the
+35 keyframe calls made 8 final keyframes plus the reference: the rest are the v1 and v2 sets and the
+re-generations from experiments E3, E4, E8, E12 and E13. 9 of the 18 TTS calls were the v1 lines lost to the
 instruction-read-aloud bug (F4). For one clean run of the final film: 9 image calls (~82 s),
 8 TTS calls (~38 s), 1 text call → **about 2 minutes of model time, ≈ $0.02 list-price equivalent**.
 
@@ -48,7 +48,7 @@ to be checked against the providers' current pricing pages.
 | Gemini `gemini-3.8-flash-tts` | 3 requests/min, **10 requests/day** per model | 429 error bodies |
 | Gemini `gemini-3.8-flash-lite-tts` | separate per-model quota (10 used without hitting it) | ran 10 requests |
 | Gemini `gemini-3.8-flash` | no limit hit; frequent 503 "high demand" | 2 × 503 then success |
-| Cloudflare Workers AI | no limit hit with 19 klein images | daily neuron allowance, see dashboard |
+| Cloudflare Workers AI | no limit hit with 35 klein images | daily neuron allowance, see dashboard |
 
 ## Frontier comparison
 

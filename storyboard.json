@@ -13,10 +13,10 @@
     "speed": 1.1
   },
   "image_model": "@cf/black-forest-labs/flux-2-klein-4b",
-  "style_block": "warm hand-painted gouache illustration, soft golden light, gentle film grain, earthy palette of ochre, deep coffee brown and muted green, main subject centered in the frame, calm composition, no text, no letters, no watermark",
+  "style_block": "warm hand-painted gouache illustration with visible brush strokes and paper texture, soft golden light, earthy Ethiopian palette of ochre, coffee brown, highland green and the warm white of handwoven cotton, authentic Ethiopian setting and people, main subject centered in the frame, calm composition, no text, no letters, no watermark",
   "character": {
     "name": "Emama (grandmother)",
-    "description": "an elderly Habesha Ethiopian grandmother with deep dark brown skin and soft wrinkles, short silver hair under a white cotton netela shawl with a thin woven green border, wearing a white habesha kemis dress, kind deep-set eyes",
+    "description": "an elderly Habesha Ethiopian grandmother from the Amhara highlands, deep dark brown skin, fine Habesha facial features with high cheekbones and soft wrinkles, silver hair in thin braids under a handwoven white cotton netela with a colourful woven tibeb border of green, yellow and red patterns, wearing a white habesha kemis with matching tibeb embroidery down the front, a tiny faint traditional cross tattoo between her eyebrows, kind deep-set eyes",
     "real_person": false
   },
   "timing": {
@@ -55,7 +55,7 @@
       "duration": 7,
       "shot_size": "extreme-wide",
       "with_character": false,
-      "image_prompt": "a small round thatched house on a green Ethiopian highland hillside at dawn, a thin line of smoke rising from the roof, eucalyptus trees, mist in the valley",
+      "image_prompt": "a round Ethiopian tukul hut with a conical thatched roof and mud walls on a green Amhara highland hillside at dawn, a thin line of smoke rising through the thatch, tall eucalyptus trees, terraced teff fields and blue mountains in the morning mist",
       "motion_prompt": "smoke rises slowly from the roof, mist drifts across the valley, camera slowly pushes in, fixed horizon",
       "camera": {
         "zoom": "in",
@@ -72,7 +72,7 @@
       "duration": 7,
       "shot_size": "close-up",
       "with_character": false,
-      "image_prompt": "extreme close-up from above of an elderly Ethiopian woman's deep brown weathered hands, white cotton sleeves with a thin woven green border, stirring green coffee beans on a flat iron pan over a small charcoal stove, the beans turning dark brown, wisps of smoke, no face visible",
+      "image_prompt": "extreme close-up from above of an elderly Ethiopian woman's deep dark brown weathered hands, white handwoven cotton sleeves with a colourful tibeb border, a thin silver Ethiopian cross bracelet, stirring green Ethiopian coffee beans with a metal stick in a flat iron roasting pan (menkeshkesh) over a small charcoal stove (kesel), some beans turning dark brown, wisps of smoke, no face visible",
       "motion_prompt": "the hands stir the beans slowly, smoke curls upward, static camera",
       "camera": {
         "zoom": "in",
@@ -89,7 +89,7 @@
       "duration": 7,
       "shot_size": "medium",
       "with_character": true,
-      "image_prompt": "the grandmother smiling, gently carrying a flat iron pan of freshly roasted dark coffee beans with fragrant smoke rising from them, offering the smoke across a warm earthen room, morning light through a small window",
+      "image_prompt": "inside a mud-walled Ethiopian home, the grandmother smiling and carrying a flat iron pan of freshly roasted dark coffee beans, fragrant smoke rising from them, wafting the smoke toward the viewer with her hand as Ethiopians do, a woven mesob basket and a small window with morning light behind her",
       "motion_prompt": "she walks slowly forward holding the pan, smoke trails behind her, camera tracks gently",
       "camera": {
         "zoom": "out",
@@ -106,7 +106,7 @@
       "duration": 7,
       "shot_size": "medium-close-up",
       "with_character": false,
-      "image_prompt": "close-up of a round black clay jebena coffee pot held by a deep brown hand, pouring a thin stream of dark coffee from a height into small white handleless cups on a low wooden tray, fresh green grass and a few yellow flowers on the floor, no face visible",
+      "image_prompt": "close-up of a traditional Ethiopian jebena: a black clay coffee pot shaped like a gourd, with a perfectly spherical round base, a tall narrow straight neck rising from it like a bottle, a short spout sticking out sideways from the round base, a small handle joining the neck to the base, and a woven straw stopper in the neck, tilted by a deep dark brown hand, pouring a thin stream of dark coffee from a height into small white handleless sini cups on a carved wooden rekebot tray, freshly cut long green grass (ketema) and yellow meskel daisies spread on the floor, frankincense smoke curling from a clay incense burner, no face visible",
       "motion_prompt": "a thin steady stream of coffee pours into the cup, steam rises, camera fixed",
       "camera": {
         "zoom": "in",
@@ -123,13 +123,13 @@
       "duration": 8,
       "shot_size": "wide",
       "with_character": true,
-      "image_prompt": "wide shot of an Ethiopian family of three generations with brown skin - children, parents and the grandmother at the center - sitting on low wooden stools around a coffee tray in a warm earthen room, a bowl of popcorn, incense smoke, laughing together",
+      "image_prompt": "wide shot inside a mud-walled Ethiopian home, three generations of one Habesha Ethiopian family, everyone with deep dark brown skin and Ethiopian facial features, sitting on low wooden stools around the coffee ceremony: the grandmother in her white netela at the center pouring from the jebena, a mother with braided shuruba hair in a white habesha kemis, a father wrapped in a white gabi, a dark-skinned Ethiopian boy and girl with curly black hair laughing, a woven basket of kolo roasted barley and a bowl of popcorn, frankincense smoke, green grass on the floor",
       "motion_prompt": "people talk and gesture gently, incense smoke drifts, slow camera pan",
       "camera": {
         "zoom": "none",
         "pan": "right"
       },
-      "seed": 1106,
+      "seed": 1206,
       "narration_en": "The second cup, tona, was for talking. This is where all the family stories came out.",
       "narration": "ሁለተኛው ሲኒ ቶና ለጨዋታ ነው። የቤተሰቡ ታሪኮች በሙሉ የሚወጡት እሱ ላይ ነበር።",
       "narration_reviewed": false
@@ -140,7 +140,7 @@
       "duration": 8,
       "shot_size": "close-up",
       "with_character": true,
-      "image_prompt": "close-up portrait of the grandmother smiling with closed eyes, holding a small white coffee cup near her face, warm golden light on her cheek",
+      "image_prompt": "close-up portrait of the grandmother smiling with closed eyes, holding a small white sini coffee cup near her face with both hands, steam rising, warm golden light on her cheek, the tibeb border of her netela framing her face",
       "motion_prompt": "she slowly opens her eyes and smiles, steam rises from the cup, very slow push in",
       "camera": {
         "zoom": "in",
@@ -157,7 +157,7 @@
       "duration": 8,
       "shot_size": "wide",
       "with_character": false,
-      "image_prompt": "the same warm earthen room now empty and quiet in dim blue evening light, the clay jebena standing alone on the wooden tray, three empty small white cups, dry grass on the floor",
+      "image_prompt": "the same mud-walled Ethiopian room now empty and quiet in dim blue evening light, a traditional Ethiopian jebena: a black clay coffee pot shaped like a gourd, with a perfectly spherical round base, a tall narrow straight neck rising from it like a bottle, a short spout sticking out sideways from the round base, a small handle joining the neck to the base, and a woven straw stopper in the neck standing alone on a carved wooden rekebot tray, three empty small white sini cups, dried yellowed grass on the floor, a cold clay incense burner, a woven mesob basket in the corner",
       "motion_prompt": "dust floats in a thin beam of light, nothing else moves, camera slowly pulls back",
       "camera": {
         "zoom": "out",
@@ -174,7 +174,7 @@
       "duration": 9,
       "shot_size": "medium-close-up",
       "with_character": false,
-      "image_prompt": "a young person's hands pouring coffee from a black clay jebena into a small white cup in a small modern city apartment by a window at dawn, city rooftops outside, the same warm golden light",
+      "image_prompt": "a young Ethiopian woman's dark brown hands pouring coffee from a black clay jebena into a small white sini cup on a windowsill of a small modern apartment at dawn, a few blades of green grass and a tiny incense burner beside the cup, the Addis Ababa skyline with high-rise buildings and the Entoto hills outside the window, the same warm golden light, no face visible",
       "motion_prompt": "coffee pours slowly into the cup, steam rises, morning light grows, static camera",
       "camera": {
         "zoom": "in",
