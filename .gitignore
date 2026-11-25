@@ -1,0 +1,16 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# editor / agent / OS
+.claude/
+.vscode/
+.idea/
+.DS_Store
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
