@@ -39,6 +39,7 @@ the general, widely shared story of the coffee ceremony.
 | Pillow | HPND (MIT-like) | subtitle and end-card rendering |
 | Arial (macOS system font) | used only to render text into frames | subtitles |
 | jsonschema | MIT | validation |
+| `references/jebena.jpg` | photo supplied by the author; used only as a shape reference sent to the image model, never shown in the film. If it comes from a museum collection, credit the source here. | jebena reference |
 
 ## Cultural representation
 

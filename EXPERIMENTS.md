@@ -134,3 +134,22 @@ history (git log) and the kept first versions in `outputs/keyframes_v1/` and
   s05 has the side spout, s08 still lacks it. 2 calls, every other shot a cache hit.
 - **Lesson:** for culturally specific objects that are rare in training data, name it *and*
   describe its shape.
+
+### E14 — A real photo as an object reference for the jebena
+- **Hypothesis:** describing the jebena's geometry (E13) is not enough; a real photo passed as a
+  second reference image will make every jebena match the real object.
+- **Change:** added `references/jebena.jpg` (a photo of a traditional jebena on its woven ring
+  stand). New storyboard fields `references` and `reference_notes` per shot; `keyframes.py` sends
+  the character reference as `input_image_0` and object references after it. Prompt text now
+  matches the photo: round body on a woven ring stand, tall neck with a clay lid, spout rising
+  from the lower body, handle from neck to shoulder. Attached to s05, s06, s08, s09.
+- **Result:** the jebena now matches the real object in all four shots, including the
+  colourful ring stand that no text prompt had produced. Two new problems appeared:
+  1. s05 got unrelated robed figures in the background → "plain mud wall background, no people", new seed.
+  2. When asked for a hand *pouring* from the jebena (s05, s09), the model kept the reference's
+     upright pose and invented a second small pot pouring into it — twice, on two seeds.
+- **Change 2:** stopped fighting the reference: the jebena stands upright with steam rising from
+  its spout, and a hand lifts a freshly poured sini cup. Narration still fits.
+- **Result 2:** one correct jebena per shot. Remaining flaw: the cups have handles (real sini are handleless).
+- **Lesson:** a reference image fixes an object's *appearance* but also pulls in its *pose*;
+  write the action so it agrees with the reference instead of contradicting it.

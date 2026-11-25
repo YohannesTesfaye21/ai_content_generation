@@ -63,3 +63,13 @@ What broke, what I tried, what fixed it. Times are East Africa Time, 26 November
 - **Status:** _to fill._ Every shot currently uses the Ken Burns fallback and the score is the
   synthesised placeholder. Record here what happens on Kaggle (GPU queue, out-of-memory errors on the
   T4, time per clip).
+
+### F12 — Changing the cache-key format regenerated every keyframe
+- **Symptom:** adding object references changed how `keyframes.py` builds its hash
+  (`*[sha256 of each reference]` instead of one sha256 of possibly-empty bytes). The next run
+  treated all 9 keyframes as stale and regenerated them, not just the 4 jebena shots.
+- **Impact:** 5 unnecessary image calls (~45 s, free tier). Non-reference shots came back
+  near-identical (same prompt and seed), but the character reference changed slightly,
+  so this would have been costly with a paid or rate-limited model.
+- **Lesson:** version the cache key explicitly (`keyframe-v3`) when its format changes, and
+  ideally migrate existing hashes instead of discarding them.

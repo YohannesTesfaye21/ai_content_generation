@@ -18,7 +18,7 @@ import urllib.error
 import urllib.request
 import uuid
 
-from common import (OUT, RetryableError, cached, ensure_dirs, input_hash, load_env,
+from common import (OUT, ROOT, RetryableError, cached, ensure_dirs, input_hash, load_env,
                     load_storyboard, log_call, mark, require_env, with_retries, PRICE_USD)
 
 load_env()
@@ -59,19 +59,26 @@ def post_multipart(fields: dict, files: dict) -> dict:
 def build_prompt(s):
     parts = [s["image_prompt"]]
     if s.get("with_character"):
-        parts.append(f"The grandmother is the woman in the reference image: {sb['character']['description']}")
+        parts.append(f"The grandmother is the woman in the first reference image: {sb['character']['description']}")
+    for note in s.get("reference_notes", []):
+        parts.append(note)
     parts.append(sb["style_block"])
     return ". ".join(parts)
 
 
-def generate(name, prompt, seed, use_ref):
+def generate(name, prompt, seed, use_ref, extra_refs=()):
+    """use_ref: attach the character reference; extra_refs: object references from the storyboard."""
     out = OUT / "keyframes" / f"{name}.jpg"
-    ref_bytes = REF.read_bytes() if use_ref else b""
-    h = input_hash("keyframe-v2", model, SIZE, prompt, seed, hashlib.sha256(ref_bytes).hexdigest())
+    refs = ([REF] if use_ref else []) + [ROOT / r for r in extra_refs]
+    for r in refs:
+        if not r.exists():
+            sys.exit(f"{name}: reference image {r} not found")
+    ref_bytes = [r.read_bytes() for r in refs]
+    h = input_hash("keyframe-v2", model, SIZE, prompt, seed, *[hashlib.sha256(b).hexdigest() for b in ref_bytes])
     if cached(out, h):
         return f"  {name}: cache hit"
     fields = {"prompt": prompt, "seed": seed, "width": SIZE, "height": SIZE}
-    files = {"input_image_0": ref_bytes} if use_ref else {}
+    files = {f"input_image_{i}": b for i, b in enumerate(ref_bytes)}
 
     def call(attempt):
         t0 = time.time()
@@ -83,14 +90,15 @@ def generate(name, prompt, seed, use_ref):
             raise RetryableError(str(r.get("errors")))
         out.write_bytes(base64.b64decode(r["result"]["image"]))
         log_call(stage="keyframes", shot=name, model=model, provider="cloudflare",
-                 params={"width": SIZE, "height": SIZE, "reference": use_ref, "prompt": prompt},
+                 params={"width": SIZE, "height": SIZE, "references": [str(r.relative_to(ROOT)) for r in refs],
+                         "prompt": prompt},
                  seed=seed, latency_s=latency, status="ok", attempt=attempt,
                  cost_usd_equiv=PRICE_USD.get(model))
         return latency
 
     latency = with_retries(call, log={"stage": "keyframes", "shot": name, "model": model, "provider": "cloudflare"})
     mark(out, h)
-    return f"  {name}: generated in {latency:.1f}s" + (" (with reference)" if use_ref else "")
+    return f"  {name}: generated in {latency:.1f}s" + (f" ({len(refs)} reference image(s))" if refs else "")
 
 
 if not only or "reference" in only or not REF.exists():
@@ -101,5 +109,6 @@ if not only or "reference" in only or not REF.exists():
 for s in sb["shots"]:
     if only and s["id"] not in only:
         continue
-    print(generate(s["id"], build_prompt(s), s.get("seed", 0), use_ref=bool(s.get("with_character"))))
+    print(generate(s["id"], build_prompt(s), s.get("seed", 0), use_ref=bool(s.get("with_character")),
+                   extra_refs=s.get("references", [])))
 print("keyframes: done")

@@ -261,6 +261,20 @@
           "narration_reviewed": {
             "type": "boolean",
             "description": "true once a native speaker has checked the line"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Object reference images (repo-relative), sent to the image model after the character reference"
+          },
+          "reference_notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Prompt sentences telling the model what each reference image is"
           }
         }
       }
