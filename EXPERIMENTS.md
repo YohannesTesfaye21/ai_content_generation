@@ -153,3 +153,22 @@ history (git log) and the kept first versions in `outputs/keyframes_v1/` and
 - **Result 2:** one correct jebena per shot. Remaining flaw: the cups have handles (real sini are handleless).
 - **Lesson:** a reference image fixes an object's *appearance* but also pulls in its *pose*;
   write the action so it agrees with the reference instead of contradicting it.
+
+### E15 — A pose reference for pouring
+- **Hypothesis:** the upright-jebena reference (E14) cannot produce pouring because it fixes the
+  pose; a second photo of a jebena *being poured* (`references/jebena_pouring.jpg`: a hand tilting
+  the jebena by its handle, a stream from the spout into handleless patterned sini cups) will.
+- **Change:** s05 and s09 use the pouring reference instead of the upright one, with the action
+  written back into the prompt.
+- **Result s05:** first seed: correct pose, but the stream missed the cup and one cup had a handle.
+  Second seed with "stream falling straight down into the opening of the cup directly below it",
+  "hand with deep dark brown Ethiopian skin", "every cup is handleless": the image now matches
+  the real ceremony — tilted jebena, stream into a cup, handleless painted sini cups. Kept.
+- **Result s09:** three attempts all failed differently: (1) light-skinned hand, stream beside
+  the cup; (2) a whole row of cups (copied from the reference) with the stream into a pot;
+  (3) coffee poured onto the table, light hand, the cup turned into a plant pot.
+- **Decision:** after three attempts, fall back (the "three attempts, then a fallback" practice):
+  s09 returns to the upright jebena from E14 with a dark-skinned hand holding one sini cup.
+  The reference's *crowd of cups* fights the shot's meaning (one person, alone, in the city), so
+  the upright reference is the right one for this shot.
+- **Lesson:** choose the reference whose composition matches the shot's story, not just its object.

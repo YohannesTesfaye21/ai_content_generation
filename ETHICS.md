@@ -40,6 +40,7 @@ the general, widely shared story of the coffee ceremony.
 | Arial (macOS system font) | used only to render text into frames | subtitles |
 | jsonschema | MIT | validation |
 | `references/jebena.jpg` | photo supplied by the author; used only as a shape reference sent to the image model, never shown in the film. If it comes from a museum collection, credit the source here. | jebena reference |
+| `references/jebena_pouring.jpg` | photo supplied by the author (appears to be a stock/editorial photo); used only as a pose reference sent to the image model, never shown in the film. Credit the source here if known. | pouring pose reference |
 
 ## Cultural representation
 

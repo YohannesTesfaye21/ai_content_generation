@@ -7,14 +7,14 @@ the local stages on an Apple M2 Pro. Actual spend: **$0**.
 
 | Stage | Model | OK calls | Failed | Mean latency (s) | Max latency (s) | Total (s) | List-price equiv. (USD) |
 |---|---|---|---|---|---|---|---|
-| keyframes | `@cf/black-forest-labs/flux-2-klein-4b` | 48 | 0 | 9.6 | 14.2 | 459 | 0.0720 |
+| keyframes | `@cf/black-forest-labs/flux-2-klein-4b` | 54 | 0 | 9.4 | 14.2 | 509 | 0.0810 |
 | narration | `gemini-3.8-flash-lite-tts` | 9 | 0 | 4.7 | 5.3 | 43 | 0.0090 |
 | narration | `gemini-3.8-flash-tts` | 9 | 0 | 7.6 | 8.4 | 68 | 0.0180 |
 | script | `gemini-3.8-flash` | 1 | 0 | 137.9 | 137.9 | 138 | 0.0005 |
-| **total** | | | | | | **708** | **0.0995** |
+| **total** | | | | | | **758** | **0.1085** |
 
 All keyframe calls made 8 final keyframes plus the reference: the rest are the v1 and v2 sets and the
-re-generations from experiments E3, E4, E8, E12, E13, E14 and the cache-key mistake F12. 9 of the 18 TTS calls were the v1 lines lost to the
+re-generations from experiments E3, E4, E8, E12–E15 and the cache-key mistake F12. 9 of the 18 TTS calls were the v1 lines lost to the
 instruction-read-aloud bug (F4). For one clean run of the final film: 9 image calls (~82 s),
 8 TTS calls (~38 s), 1 text call → **about 2 minutes of model time, ≈ $0.02 list-price equivalent**.
 

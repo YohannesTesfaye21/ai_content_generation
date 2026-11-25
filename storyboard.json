@@ -106,21 +106,21 @@
       "duration": 7,
       "shot_size": "medium-close-up",
       "with_character": false,
-      "image_prompt": "close-up of the traditional Ethiopian jebena from the jebena reference image: a dark brown-black clay coffee pot with a round spherical body resting on a small woven ring stand, a tall narrow neck topped with a small clay lid, a spout rising diagonally from the lower body, and a handle curving from the neck down to the shoulder, standing upright on a carved wooden rekebot tray with steam rising from its spout, small white handleless sini cups freshly filled with dark coffee in front of it, a deep dark brown hand lifting one sini cup, freshly cut long green grass (ketema) and yellow meskel daisies on the floor, frankincense smoke curling from a clay incense burner, plain warm mud wall in the soft-focus background, no people in the background, only one jebena in the picture",
-      "motion_prompt": "steam rises from the jebena spout, the hand slowly lifts the cup, incense smoke curls, camera fixed",
+      "image_prompt": "close-up of a hand with deep dark brown Ethiopian skin holding a traditional black clay jebena by its handle and tilting it forward exactly like the pouring reference image, a thin stream of dark coffee falling from the long spout straight down into the opening of the cup directly below it into small white handleless sini cups painted with colourful Ethiopian patterns, exactly like the cups in the pouring reference image, arranged on a carved wooden rekebot tray, freshly cut long green grass (ketema) and yellow meskel daisies on the floor, frankincense smoke curling from a clay incense burner, plain warm mud wall in the soft-focus background, no people in the background, only one jebena in the picture, every cup is handleless",
+      "motion_prompt": "the coffee stream pours steadily into the cup, steam rises, incense smoke curls, camera fixed",
       "camera": {
         "zoom": "in",
         "pan": "down"
       },
-      "seed": 1305,
+      "seed": 1405,
       "narration_en": "The first cup is called abol. It is the strongest. It is for waking up.",
       "narration": "የመጀመሪያው ሲኒ አቦል ይባላል። እሱ ጠንካራ ነው። ከእንቅልፍ ለመንቃት የሚጠጣ።",
       "narration_reviewed": false,
       "references": [
-        "references/jebena.jpg"
+        "references/jebena_pouring.jpg"
       ],
       "reference_notes": [
-        "The jebena must look exactly like the clay pot in the jebena reference image."
+        "Copy the pose of the jebena, the hand and the handleless patterned cups from the pouring reference image."
       ]
     },
     {
