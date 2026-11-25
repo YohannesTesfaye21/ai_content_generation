@@ -1,0 +1,189 @@
+{
+  "title": "The Third Cup",
+  "logline": "A grandchild remembers how their grandmother's slow coffee ceremony held a scattered family together, one cup at a time.",
+  "language": "am",
+  "language_name": "Amharic",
+  "voice": {
+    "model": "gemini-3.8-flash-lite-tts",
+    "fallback_models": [
+      "gemini-3.8-flash-tts"
+    ],
+    "name": "Kore",
+    "style": "Say warmly, at a gentle natural pace:",
+    "speed": 1.1
+  },
+  "image_model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "style_block": "warm hand-painted gouache illustration, soft golden light, gentle film grain, earthy palette of ochre, deep coffee brown and muted green, main subject centered in the frame, calm composition, no text, no letters, no watermark",
+  "character": {
+    "name": "Emama (grandmother)",
+    "description": "an elderly Habesha Ethiopian grandmother with deep dark brown skin and soft wrinkles, short silver hair under a white cotton netela shawl with a thin woven green border, wearing a white habesha kemis dress, kind deep-set eyes",
+    "real_person": false
+  },
+  "timing": {
+    "narration_lead_s": 0.4,
+    "narration_padding_s": 0.6,
+    "end_card_s": 3
+  },
+  "music": {
+    "source": "placeholder",
+    "caption": "instrumental, gentle Ethiopian folk underscore, soft krar plucks and warm low strings, slow and tender, sparse texture, no lead melody, nostalgic, intimate",
+    "bpm": 68,
+    "key": "A minor",
+    "cues": [
+      {
+        "at_shot": "s01",
+        "note": "Music fades in softly under the dawn"
+      },
+      {
+        "at_shot": "s05",
+        "note": "Slight lift as the first cup is poured"
+      },
+      {
+        "at_shot": "s08",
+        "note": "Thins out to almost nothing: the family is apart"
+      },
+      {
+        "at_shot": "s09",
+        "note": "Theme returns warmly for the last cup, then fades under the end card"
+      }
+    ]
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "reason": "Establishing shot: tells the audience where and when, a highland village at dawn, before we meet anyone.",
+      "duration": 7,
+      "shot_size": "extreme-wide",
+      "with_character": false,
+      "image_prompt": "a small round thatched house on a green Ethiopian highland hillside at dawn, a thin line of smoke rising from the roof, eucalyptus trees, mist in the valley",
+      "motion_prompt": "smoke rises slowly from the roof, mist drifts across the valley, camera slowly pushes in, fixed horizon",
+      "camera": {
+        "zoom": "in",
+        "pan": "none"
+      },
+      "seed": 1101,
+      "narration_en": "Every morning in my grandmother's house began the same way: with smoke, and with coffee.",
+      "narration": "የአያቴ ቤት ጠዋት ሁሌም በአንድ ዓይነት መንገድ ነበር የሚጀምረው፤ በጢስ እና በቡና።",
+      "narration_reviewed": false
+    },
+    {
+      "id": "s02",
+      "reason": "Insert on her hands: the ritual is physical and slow, and hands carry the feeling without showing a face yet.",
+      "duration": 7,
+      "shot_size": "close-up",
+      "with_character": false,
+      "image_prompt": "extreme close-up from above of an elderly Ethiopian woman's deep brown weathered hands, white cotton sleeves with a thin woven green border, stirring green coffee beans on a flat iron pan over a small charcoal stove, the beans turning dark brown, wisps of smoke, no face visible",
+      "motion_prompt": "the hands stir the beans slowly, smoke curls upward, static camera",
+      "camera": {
+        "zoom": "in",
+        "pan": "right"
+      },
+      "seed": 1102,
+      "narration_en": "She roasted the green beans over the fire until they cracked and turned dark, and the whole house smelled of it.",
+      "narration": "ጥሬውን ቡና እሳት ላይ ትቆላዋለች፤ እስኪፈነዳና እስኪጠቁር ድረስ። ቤቱም በሙሉ በቡናው መዓዛ ይሞላል።",
+      "narration_reviewed": false
+    },
+    {
+      "id": "s03",
+      "reason": "Introduces the grandmother herself: a medium shot so we see who she is and the gesture of sharing the smoke.",
+      "duration": 7,
+      "shot_size": "medium",
+      "with_character": true,
+      "image_prompt": "the grandmother smiling, gently carrying a flat iron pan of freshly roasted dark coffee beans with fragrant smoke rising from them, offering the smoke across a warm earthen room, morning light through a small window",
+      "motion_prompt": "she walks slowly forward holding the pan, smoke trails behind her, camera tracks gently",
+      "camera": {
+        "zoom": "out",
+        "pan": "left"
+      },
+      "seed": 1103,
+      "narration_en": "Then she carried the smoking pan to each of us. Breathe it in, she said. This is how a day should start.",
+      "narration": "ከዚያም የሚጤሰውን መቁያ ይዛ ወደ እያንዳንዳችን ትመጣለች። «እስቲ አሽቱት» ትላለች፣ «ቀን መጀመር ያለበት እንዲህ ነው።»",
+      "narration_reviewed": false
+    },
+    {
+      "id": "s05",
+      "reason": "The first cup, abol: the pour is the most iconic image of the ceremony and starts the three-cup structure.",
+      "duration": 7,
+      "shot_size": "medium-close-up",
+      "with_character": false,
+      "image_prompt": "close-up of a round black clay jebena coffee pot held by a deep brown hand, pouring a thin stream of dark coffee from a height into small white handleless cups on a low wooden tray, fresh green grass and a few yellow flowers on the floor, no face visible",
+      "motion_prompt": "a thin steady stream of coffee pours into the cup, steam rises, camera fixed",
+      "camera": {
+        "zoom": "in",
+        "pan": "down"
+      },
+      "seed": 1105,
+      "narration_en": "The first cup is called abol. It is the strongest. It is for waking up.",
+      "narration": "የመጀመሪያው ሲኒ አቦል ይባላል። እሱ ጠንካራ ነው። ከእንቅልፍ ለመንቃት የሚጠጣ።",
+      "narration_reviewed": false
+    },
+    {
+      "id": "s06",
+      "reason": "The second cup, tona: a wide shot of family gathered, because the ceremony is about people, not coffee.",
+      "duration": 8,
+      "shot_size": "wide",
+      "with_character": true,
+      "image_prompt": "wide shot of an Ethiopian family of three generations with brown skin - children, parents and the grandmother at the center - sitting on low wooden stools around a coffee tray in a warm earthen room, a bowl of popcorn, incense smoke, laughing together",
+      "motion_prompt": "people talk and gesture gently, incense smoke drifts, slow camera pan",
+      "camera": {
+        "zoom": "none",
+        "pan": "right"
+      },
+      "seed": 1106,
+      "narration_en": "The second cup, tona, was for talking. This is where all the family stories came out.",
+      "narration": "ሁለተኛው ሲኒ ቶና ለጨዋታ ነው። የቤተሰቡ ታሪኮች በሙሉ የሚወጡት እሱ ላይ ነበር።",
+      "narration_reviewed": false
+    },
+    {
+      "id": "s07",
+      "reason": "Close-up of her face for the emotional peak: the blessing and her rule that nobody leaves early.",
+      "duration": 8,
+      "shot_size": "close-up",
+      "with_character": true,
+      "image_prompt": "close-up portrait of the grandmother smiling with closed eyes, holding a small white coffee cup near her face, warm golden light on her cheek",
+      "motion_prompt": "she slowly opens her eyes and smiles, steam rises from the cup, very slow push in",
+      "camera": {
+        "zoom": "in",
+        "pan": "none"
+      },
+      "seed": 1107,
+      "narration_en": "The third cup is baraka, the blessing. Nobody leaves before the third cup, she always told us.",
+      "narration": "ሦስተኛው ሲኒ በረካ ነው፤ ምርቃቱ። «ከበረካ በፊት ማንም አይነሳም» ትለን ነበር ሁሌም።",
+      "narration_reviewed": false
+    },
+    {
+      "id": "s08",
+      "reason": "The turn: the same room, empty and dim. Absence shows how the family has scattered.",
+      "duration": 8,
+      "shot_size": "wide",
+      "with_character": false,
+      "image_prompt": "the same warm earthen room now empty and quiet in dim blue evening light, the clay jebena standing alone on the wooden tray, three empty small white cups, dry grass on the floor",
+      "motion_prompt": "dust floats in a thin beam of light, nothing else moves, camera slowly pulls back",
+      "camera": {
+        "zoom": "out",
+        "pan": "none"
+      },
+      "seed": 1108,
+      "narration_en": "Now our family lives in four cities and two countries. We rarely sit together for three cups.",
+      "narration": "አሁን ቤተሰባችን በአራት ከተሞች እና በሁለት አገር ነው የሚኖረው። አብረን ተቀምጠን ሦስቱን ሲኒ የምንጠጣው አልፎ አልፎ ነው።",
+      "narration_reviewed": false
+    },
+    {
+      "id": "s09",
+      "reason": "Resolution: the grandchild continues the ritual in a modern apartment, closing the motif of the third cup.",
+      "duration": 9,
+      "shot_size": "medium-close-up",
+      "with_character": false,
+      "image_prompt": "a young person's hands pouring coffee from a black clay jebena into a small white cup in a small modern city apartment by a window at dawn, city rooftops outside, the same warm golden light",
+      "motion_prompt": "coffee pours slowly into the cup, steam rises, morning light grows, static camera",
+      "camera": {
+        "zoom": "in",
+        "pan": "none"
+      },
+      "seed": 1109,
+      "narration_en": "But when I make coffee, I still roast it the slow way. And I always wait for the third cup.",
+      "narration": "እኔ ግን ቡና ሳፈላ አሁንም ቀስ ብዬ ነው የምቆላው። ሦስተኛውንም ሲኒ ሁልጊዜ እጠብቃለሁ።",
+      "narration_reviewed": false
+    }
+  ]
+}
